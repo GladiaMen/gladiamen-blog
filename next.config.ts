@@ -3,14 +3,6 @@
 const nextConfig = {
   trailingSlash: true,
 
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-
   images: {
     // ONLY external domains – never your own!
     remotePatterns: [
@@ -59,6 +51,7 @@ const nextConfig = {
   },
 
   compress: true,
+  swcMinify: true,
   experimental: { scrollRestoration: true },
 };
 
