@@ -21,21 +21,13 @@ const nextConfig = {
       {
         source: "/blog/api/ghost-image",
         headers: [
-          {
-            key: "Cache-Control",
-            value: "public, max-age=31536000, immutable",
-          },
+          { key: "Cache-Control", value: "public, max-age=31536000, immutable" },
         ],
       },
       // static assets
       {
         source: "/:path*.(js|css|png|jpg|jpeg|gif|svg|webp|avif)",
-        headers: [
-          {
-            key: "Cache-Control",
-            value: "public, max-age=31536000, immutable",
-          },
-        ],
+        headers: [{ key: "Cache-Control", value: "public, max-age=31536000, immutable" }],
       },
     ];
   },
@@ -51,7 +43,6 @@ const nextConfig = {
   },
 
   compress: true,
-  swcMinify: true,
   experimental: { scrollRestoration: true },
 };
 
