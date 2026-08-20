@@ -48,7 +48,7 @@ export default function RootLayout({
         className={cn(
           "min-h-screen font-sans antialiased bg-olive-50 text-olive-700",
           font.variable,
-          fontDisplay.variable
+          fontDisplay.variable,
         )}
       >
         <ThemeProvider
@@ -86,7 +86,6 @@ const Nav = ({ className, children, id }: NavProps) => {
         <Link
           className="hover:opacity-75 transition-all flex gap-2 items-center"
           href={blogConfig.websiteUrl}
-          target="_blank"
         >
           <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-gray-200 overflow-hidden">
             <Image
@@ -112,11 +111,7 @@ const Nav = ({ className, children, id }: NavProps) => {
             ))}
           </div>
           <Button asChild size="sm" className="flex">
-            <Link
-              href={blogConfig.signupUrl}
-              target="_blank"
-              className="bg-indigo-600"
-            >
+            <Link href={blogConfig.signupUrl} className="bg-indigo-600">
               Get Started
             </Link>
           </Button>
@@ -142,9 +137,11 @@ const Footer = () => {
             {blogConfig.brandName}
           </div>
           <div className="text-muted-foreground">
-            &copy; <a href={blogConfig.websiteUrl} target="_blank">
+            &copy;{" "}
+            <a href={blogConfig.websiteUrl} target="_blank">
               {blogConfig.brandName} {date}
-            </a>. All rights reserved.
+            </a>
+            . All rights reserved.
           </div>
         </div>
       </div>
