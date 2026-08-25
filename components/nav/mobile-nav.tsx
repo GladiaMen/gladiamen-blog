@@ -63,11 +63,13 @@ export function MobileNav({
         <ScrollArea className="my-4 h-[calc(100vh-8rem)] pb-10 pl-6">
           <div className="flex flex-col space-y-3">
             <div className="pt-2 pr-6">
-              <Button
-                asChild
-                className="w-full bg-indigo-600 hover:bg-indigo-700"
-              >
-                <Link href={signupUrl} onClick={() => setOpen(false)}>
+              <Button asChild className="w-full bg-indigo-600 hover:bg-indigo-700">
+                <Link
+                  href={signupUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setOpen(false)}
+                >
                   Get Started
                 </Link>
               </Button>
