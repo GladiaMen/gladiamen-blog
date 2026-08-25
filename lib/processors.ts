@@ -48,7 +48,7 @@ export function openLinksInNewTab(html: string) {
         ).join(" ")
       : "noopener noreferrer";
     const attrsWithoutRel = attrs.replace(/\s+rel\s*=\s*["'][^"']*["']/i, "");
-    return `<a${attrsWithoutRel} target="_blank" rel="${rel}">`;
+    return `<a${attrsWithoutRel} rel="${rel}">`;
   });
 }
 
